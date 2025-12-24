@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://lamb-project.org">
-    <img src="https://lamb-project.org/images/lamb_1.png" alt="LAMB Project" width="300">
+    <img src="lamb_1.png" alt="LAMB Project" width="300">
   </a>
 </div>
 
