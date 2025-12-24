@@ -24,6 +24,9 @@ import uvicorn
 
 app = FastAPI(title="LTI 1.1 Test Platform")
 
+# Mount static files directory
+app.mount("/static", StaticFiles(directory="."), name="static")
+
 # Database setup
 DB_PATH = "lti_platform.db"
 
@@ -828,7 +831,7 @@ def get_base_template():
                 <p>Local development environment for testing LTI tool integrations</p>
             </div>
             <a href="https://lamb-project.org" target="_blank" rel="noopener" style="display: block;">
-                <img src="https://lamb-project.org/images/lamb_1.png" alt="LAMB Project" style="height: 60px; width: auto;">
+                <img src="/static/lamb_1.png" alt="LAMB Project" style="height: 100px; width: auto;">
             </a>
         </div>
         <nav>

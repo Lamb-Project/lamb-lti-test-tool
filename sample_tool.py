@@ -14,10 +14,14 @@ import time
 
 from fastapi import FastAPI, Request, Form, HTTPException
 from fastapi.responses import HTMLResponse
+from fastapi.staticfiles import StaticFiles
 import uvicorn
 import httpx
 
 app = FastAPI(title="Sample LTI Tool")
+
+# Mount static files directory
+app.mount("/static", StaticFiles(directory="."), name="static")
 
 # Store launch data temporarily (in production, use a proper database)
 launches = {}
@@ -246,7 +250,7 @@ async def lti_launch(request: Request):
                         <p>Successfully launched via LTI 1.1</p>
                     </div>
                     <a href="https://lamb-project.org" target="_blank" rel="noopener">
-                        <img src="https://lamb-project.org/images/lamb_1.png" alt="LAMB Project" style="height: 50px; width: auto;">
+                        <img src="/static/lamb_1.png" alt="LAMB Project" style="height: 90px; width: auto;">
                     </a>
                 </div>
             </div>
@@ -452,7 +456,7 @@ async def index():
     <body>
         <div class="card">
             <a href="https://lamb-project.org" target="_blank" rel="noopener" style="display: block; margin-bottom: 1rem;">
-                <img src="https://lamb-project.org/images/lamb_1.png" alt="LAMB Project" style="height: 80px; width: auto;">
+                <img src="/static/lamb_1.png" alt="LAMB Project" style="height: 150px; width: auto;">
             </a>
             <h1>🎓 Sample LTI 1.1 Tool</h1>
             <p>This tool must be launched via LTI from a platform.</p>
