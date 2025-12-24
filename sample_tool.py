@@ -240,8 +240,15 @@ async def lti_launch(request: Request):
     <body>
         <div class="container">
             <div class="header">
-                <h1>🎓 Sample LTI Tool</h1>
-                <p>Successfully launched via LTI 1.1</p>
+                <div style="display: flex; align-items: center; justify-content: space-between;">
+                    <div>
+                        <h1>🎓 Sample LTI Tool</h1>
+                        <p>Successfully launched via LTI 1.1</p>
+                    </div>
+                    <a href="https://lamb-project.org" target="_blank" rel="noopener">
+                        <img src="https://lamb-project.org/images/lamb_1.png" alt="LAMB Project" style="height: 50px; width: auto;">
+                    </a>
+                </div>
             </div>
             <div class="content">
                 <div class="info-card">
@@ -444,6 +451,9 @@ async def index():
     </head>
     <body>
         <div class="card">
+            <a href="https://lamb-project.org" target="_blank" rel="noopener" style="display: block; margin-bottom: 1rem;">
+                <img src="https://lamb-project.org/images/lamb_1.png" alt="LAMB Project" style="height: 80px; width: auto;">
+            </a>
             <h1>🎓 Sample LTI 1.1 Tool</h1>
             <p>This tool must be launched via LTI from a platform.</p>
             <p>Configure your platform to launch:</p>

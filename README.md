@@ -1,6 +1,14 @@
-# LTI 1.1 Test Platform
+<div align="center">
+  <a href="https://lamb-project.org">
+    <img src="https://lamb-project.org/images/lamb_1.png" alt="LAMB Project" width="300">
+  </a>
+</div>
 
-A local development platform for testing LTI 1.1 tool integrations. Built with Python, FastAPI, and SQLite3.
+# LAMB LTI Test Tool
+
+A local development platform for testing LTI 1.1 tool integrations. Built with Python, FastAPI, and SQLite3. 
+
+Part of the [LAMB Project](https://lamb-project.org) - an open source project developed by Marc Alier and Juanan Pereira, professors and researchers at the Universitat Politècnica de Catalunya (UPC) and Universidad del País Vasco (UPV/EHU).
 
 ## Features
 
@@ -244,4 +252,4 @@ All users are enrolled in all courses.
 
 ## License
 
-MIT
+GPL v3.0

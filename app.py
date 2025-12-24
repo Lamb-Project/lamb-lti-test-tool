@@ -822,8 +822,15 @@ def get_base_template():
 </head>
 <body>
     <header>
-        <h1>🚀 LTI 1.1 Test Platform</h1>
-        <p>Local development environment for testing LTI tool integrations</p>
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem;">
+            <div>
+                <h1>🚀 LTI 1.1 Test Platform</h1>
+                <p>Local development environment for testing LTI tool integrations</p>
+            </div>
+            <a href="https://lamb-project.org" target="_blank" rel="noopener" style="display: block;">
+                <img src="https://lamb-project.org/images/lamb_1.png" alt="LAMB Project" style="height: 60px; width: auto;">
+            </a>
+        </div>
         <nav>
             <a href="/" class="{{'active' if active_page == 'dashboard' else ''}}">Dashboard</a>
             <a href="/tool-servers" class="{{'active' if active_page == 'tool-servers' else ''}}">Tool Servers</a>
