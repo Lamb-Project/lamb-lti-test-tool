@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  lti-platform:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+      - ./app.py:/app/app.py  # For development hot-reload
+    environment:
+      - PYTHONUNBUFFERED=1
+    networks:
+      - lti-network
+
+  # Example: If you have an LTI tool running, add it here
+  # lti-tool:
+  #   build: ../your-lti-tool
+  #   ports:
+  #     - "8080:8080"
+  #   networks:
+  #     - lti-network
+
+networks:
+  lti-network:
+    driver: bridge
